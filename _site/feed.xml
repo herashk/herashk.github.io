@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>김서현입니다.</title>
+    <description>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.
+</description>
+    <link>/</link>
+    <atom:link href="/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Sat, 05 Mar 2016 13:01:23 -0500</pubDate>
+    <lastBuildDate>Sat, 05 Mar 2016 13:01:23 -0500</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Node.js for front-end development</title>
+        <description>&lt;p&gt;About a week ago, a question came up among my friends - “when people refer to
+node being on the frontend…i’m confused…to me: node === backend”.
+I guess most of the time, Node.js is associated with back-end development and
+that is because Node.js was originally built to make developing of scalable
+applications easily by allowing us to write JS code that runs in a server
+environment. Because of that reason, it seems that whatever projects that include
+Node.js are often considered as just Node.js projects and nothing more.
+But Node.js has other handy usages and in this post, I am going to attempt to
+explain how Node.js can be used for front-end projects.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;DEVELOPMENT AND PRODUCTION WORKFLOW&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;You can use npm for front-end development and npm is Node.js’s package manager,
+hence, using of Node.js on the front-end.
+Let’s say I want to create a simple project that contains JS, CSS, and HTML
+files and use Node.js to set up and run development tools and tasks. I would
+normally start by running npm init in my command to generate package.json. Then,
+I would create index.html and make CSS and SASS folders.&lt;/p&gt;
+
+&lt;p&gt;Folder Layout: CSS/app.css, SASS/app.scss&lt;/p&gt;
+
+&lt;p&gt;Because I’ve created CSS and SASS folders, I want to be able to compile SASS
+into CSS. To do this, I can go to the package.json file and then under “scripts”,
+I can declare a npm command - ex: ‘compile-sass’ that I can use later in my
+terminal (see below for implementation).&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&quot;scripts&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;s2&quot;&gt;&quot;compile-sass&quot;&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;sass --watch sass/app.scss:css/app.css&quot;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;As you can see from the implementation above, I can then just open up terminal,
+type in ‘npm run compile-sass’ and whatever code I wrote in SASS will be compiled
+and put into app.css. And I can do the same process to run Uglify to minify my JS
+code or to run Browserify to bundle all the modules I am using.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Takeaways&lt;/strong&gt;:&lt;/p&gt;
+
+&lt;p&gt;Node.js can run on a server but you don’t have to make your projects rely on
+a Node.js prod-environment. As seen from the example above, you can use Node.js
+to set up development and production workflow.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 03 Mar 2016 00:00:00 -0500</pubDate>
+        <link>/software%20engineering/node/front-end/npm/2016/03/03/node-on-frontend.html</link>
+        <guid isPermaLink="true">/software%20engineering/node/front-end/npm/2016/03/03/node-on-frontend.html</guid>
+        
+        
+        <category>software engineering</category>
+        
+        <category>node</category>
+        
+        <category>front-end</category>
+        
+        <category>npm</category>
+        
+      </item>
+    
+      <item>
+        <title>Whiteboarding</title>
+        <description>&lt;p&gt;Whiteboarding is one of the most critical skills you need to have in order to become a successful software engineer. Above all, it is super important for getting a job and you will be doing a lot of it during team projects or anytime you are trying to solve technical problems. But often times, people struggle with whiteboarding and I do as well. The first time I practiced whiteboarding, I let about 5 minutes pass in awkward silence and struggled to make sense of the problem that was given. Since then, I have been practicing whiteboarding through few different approaches and finally came up with steps that I feel comfortable with.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Ask any clarifying questions in the beginning. We don’t want to make any assumptions about the problem we are given because we want to return an answer that satisfies all the requirements required by the interviewer.&lt;/li&gt;
+  &lt;li&gt;Take time in the beginning defining inputs, outputs, edge cases and constraints and make note of them on the whiteboard so you don’t forget!&lt;/li&gt;
+  &lt;li&gt;Use the whiteboard. A LOT! Especially if there is a piece of the problem that doesn’t make sense to you, you want to spend time visualizing examples by drawing them out on the whiteboard. When you can visualize different edge cases, it will be much easier for you to come up with a solution.&lt;/li&gt;
+  &lt;li&gt;Once you are pretty confident with the solution you came up, move onto pseudocoding. Only when you are confident with your pseudocodes move onto actual code writing. I usually recommend NOT jumping straight into coding without having a pretty good solution in pseudocode. Writing the actual code should just be translating pseudocode to JavaScript. Likewise, pseudocode should just be translating a solution into plain English logic.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;strong&gt;Takeaways/Things to keep in mind:&lt;/strong&gt;
+1. Don’t be afraid to turn the questions back around to the interviewer. As we have said above, we want to clear out all assumptions we might have about the question prompt. Also, asking more questions buys you more time!
+2. If you can’t think of any edge cases that are specific to the problem, think of standard edge cases for the data types you are working with (ex: arrays: empty arrays, duplicates/copies, numbers: negative or positive).
+3. When you are creating example data, try to include all possible edge cases as this decreases the chance of you missing or forgetting about important edge cases.
+4. Try your best to structure your pseudocode to make translating from pseudocode to JavaScript codes as easy as possible. We want anyone to be able to look at the pseudocode and translate them into actual codes.
+5. Be confident, stay engaged, and do your best to keep conversations flowing! This is the most important part. We want to show off our communications skills and positive energy, eventually wow-ing them to want to work with us.&lt;/p&gt;
+</description>
+        <pubDate>Fri, 22 Jan 2016 00:00:00 -0500</pubDate>
+        <link>/hack%20reactor/software%20engineering/bootcamp/whiteboarding/pairprogramming/2016/01/22/whiteboarding.html</link>
+        <guid isPermaLink="true">/hack%20reactor/software%20engineering/bootcamp/whiteboarding/pairprogramming/2016/01/22/whiteboarding.html</guid>
+        
+        
+        <category>hack reactor</category>
+        
+        <category>software engineering</category>
+        
+        <category>bootcamp</category>
+        
+        <category>whiteboarding</category>
+        
+        <category>pairprogramming</category>
+        
+      </item>
+    
+      <item>
+        <title>Bus It Baby | never miss your final bus stop!</title>
+        <description>&lt;p&gt;My Greenfield project, (which was my first group project at Hack Reactor) is called ‘Bus It Baby’. Yes… the name of the app sounds a bit strange and it does make our team cringe slightly in embarrassment whenever we have to talk about it. But it did bring a lot of joy to the HRR9 cohort!&lt;/p&gt;
+
+&lt;p&gt;I had a wonderful opportunity to work on this app with three other amazing developers – Alon Robinson, David Lee, and Mykia Smith. Alon came up with the idea of this app; he wanted to develop a mobile app where public transit riders can enter in their destination stops and when they are within a specific distance from the destination, an alarm would trigger so that even if they are asleep, listening to music or even day dreaming, they wouldn’t miss their final stops.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tech Stack : Ionic, AngularJS, Firebase, Google Maps API, Bootstrap, SASS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We wanted our app to do the following broadly:
+- allow users to sign in through Google
+- allow users to select destination and the distance from it
+- trigger alarm when user reaches the final destination
+- (store user information into a database, if we had time left)&lt;/p&gt;
+
+&lt;p&gt;And here are the features we managed to implement:
+- a mobile app using Ionic and AngularJS, optimized for iOS
+- authentication for Github (instead of Google) by integrating the app with Firebase
+- tracking/calculating distance between user and specified final destination by integrating the app with Google Maps API&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/busitbaby.jpg&quot; alt=&quot;Bus It Baby&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Takeaways:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Managing scope is difficult! This was the first group project for all of us and in the beginning, all of us were super excited and wanted to build an awesome full functioning app. The possibilities seemed limitless!! But, we had a 4-day time limitation for Greenfield and it was just impossible to build something that we originally had in mind. So we had to adjust our scope a lot as we developed Bus It Baby.&lt;/li&gt;
+  &lt;li&gt;It is important to divide tasks and keep track of what everyone is doing. We used waffle.io to view everyone’s task logs and having a visualization of what everyone is doing and where the app was in terms of progress was very helpful.&lt;/li&gt;
+  &lt;li&gt;Google Maps API is awesome! I got a chance to familiarize myself a bit with Google Maps API during Greenfield and since it is so well documented, you can really take time to learn it and use in any ways that are needed.&lt;/li&gt;
+  &lt;li&gt;Angular &amp;amp; Ionic are a match made in heaven! This description is also on the Ionic website and they are not kidding. Ionic utilizes AngularJS and it just feels like you are writing an Angular app and it also has great CLI, allowing you to create, build, test, and deploy your app easily.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Overall, I had so much fun during Greenfield. I couldn’t ask for a better team; the communication was so awesome and fun and the level of passion, energy, and humor everyone brought to the team just made Bus It Baby all the more special for me.&lt;/p&gt;
+</description>
+        <pubDate>Thu, 07 Jan 2016 00:00:00 -0500</pubDate>
+        <link>/hack%20reactor/software%20engineering/bootcamp/thesis/legacy/2016/01/07/busitbaby.html</link>
+        <guid isPermaLink="true">/hack%20reactor/software%20engineering/bootcamp/thesis/legacy/2016/01/07/busitbaby.html</guid>
+        
+        
+        <category>hack reactor</category>
+        
+        <category>software engineering</category>
+        
+        <category>bootcamp</category>
+        
+        <category>thesis</category>
+        
+        <category>legacy</category>
+        
+      </item>
+    
+      <item>
+        <title>ContractFix | The quickest, easiest way to do contracts</title>
+        <description>&lt;p&gt;This post will introduce my latest project, ContractFix.&lt;/p&gt;
+
+&lt;p&gt;During Hack Reactor, you are given several opportunities to create few group projects. For the first two projects – Greenfield and Legacy, we have 4-day time limitation so it is difficult to develop applications that are fully functional and launchable. However, for the final thesis project, we are given 4-weeks. Naturally, most of us wanted to take on something that is more scalable and complex.&lt;/p&gt;
+
+&lt;p&gt;One of my classmates, Ahmet, came up with the idea of the app (checkout his blog! – http://jsville.com) and few of us who loved it formed a team of four. Ahmet has an incredible amount of project management experience and at his past jobs, he always thought too much unnecessary money and time are spent and wasted for contract negotiation because of mailing or emailing back and forth revisions, having to visit the other signing party to finalize deals, etc, so why not create a platform that allows easy and smooth contract negotiation, management, and signing?&lt;/p&gt;
+
+&lt;p&gt;We originally wanted to offer two different types of services – one designed for companies/corporates and the other designed for individuals. However, during brainstorming, it became apparent that if we were to include features needed for companies, the scope of the project would be too big and the 4-weeks we have definitely would not be enough. So we decided to focus on catering to individuals needs for now.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Tech Stack: Node.js, Hapi.js, MongoDB, AngularJS, Bootstrap, CSS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;We wanted our application to do the following: allow users to&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;sign up and verify their accounts&lt;/li&gt;
+  &lt;li&gt;create, edit, and save contracts&lt;/li&gt;
+  &lt;li&gt;select pre-loaded templates or start from an empty editor&lt;/li&gt;
+  &lt;li&gt;track changes that they make for the contracts&lt;/li&gt;
+  &lt;li&gt;invite other parties to edit contracts&lt;/li&gt;
+  &lt;li&gt;submit digital signatures for all signing parties&lt;/li&gt;
+  &lt;li&gt;view past and current contracts on user dashboard&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;While these features initially sounded like they were very much doable, some of them were extremely challenging, especially creating of the editor that tracks changes and implementation of digital signature. Luckily, my teammates Michael and Ahmet were able to implement these features after putting in hours and hours of work. Michael basically engineered a text editor and revision system based on CKEDITOR and Ahmet engineered the digital signature portion using OpenPGP.js at the back-end and AngularJS and jSignature on the front-end.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Digital Signature Page&lt;/strong&gt;
+&lt;img src=&quot;/assets/signature.png&quot; alt=&quot;Digital Signature Page&quot; /&gt;
+&lt;strong&gt;Editor Page&lt;/strong&gt;
+&lt;img src=&quot;/assets/editor.png&quot; alt=&quot;Editor Page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another challenge was figuring out the user flow and designing the front-end UI. Because our app required quite a number of complex functionalities, we spent a lot of time in the beginning developing a project plan and defining product requirements which helped us tremendously later. I mainly worked on building the Angular app, transforming UI mock-ups into front-end UI, implementing client-side authentication using JSON Web Tokens and building a user dashboard to allow users to view and access their past and current contracts.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;ContractFix Landing Page&lt;/strong&gt;
+&lt;img src=&quot;/assets/landingpage.png&quot; alt=&quot;ContractFix Landing Page&quot; /&gt;
+&lt;strong&gt;User Dashboard Page&lt;/strong&gt;
+&lt;img src=&quot;/assets/dashboard.png&quot; alt=&quot;User Dashboard Page&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Some of the things I learned and took away:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Be resourceful and make less work for yourself. During thesis, Ahmet introduced us all to several different programs – Paw and Robomongo, which made testing requests between the server and the client-side and viewing the database easier.&lt;/li&gt;
+  &lt;li&gt;Keep in mind any technical debt you are accumulating. Although we did try to modularize our codes as much as possible, by the end of the project, we were so concentrated in getting the work that we wrote some codes that were not very ideal – for example, making HTTP requests directly inside a controller and not making use of services. Luckily we did not run into Git merge conflicts but this sometimes made it difficult to see where errors occurred and now we have a lot of refactoring to do. Also, we did not make use of TDD or continuous integration.&lt;/li&gt;
+  &lt;li&gt;Front-end work is important for team’s confidence. This is a tip I got from my brother who is also a software engineer. We spent a great deal of time styling our app because usually groups with more beautiful apps seem to feel better about their projects. Because we had weekly progress/check-in presentation, if your group had a lot to show on the front-end, it definitely made an impression.&lt;/li&gt;
+  &lt;li&gt;Communicate!!! I cannot emphasize enough the importance of communication between teammates. If you have great, honest, and respectful communication happening within your group, you will naturally love spending time working on the project and be more inclined to put in more hours of work. Also take some time in the beginning to divide roles and everyone should take full responsibility for what they promised to complete.
+Overall, I learned so much in the past 4 weeks and I am so thankful that I got a chance to work with such an awesome team. Some of us are planning on taking the app to the next level as well. In the meantime, check out our deployed app &lt;a href=&quot;https://contract-fix.herokuapp.com/&quot;&gt;here&lt;/a&gt;!&lt;/li&gt;
+&lt;/ul&gt;
+
+</description>
+        <pubDate>Wed, 06 Jan 2016 00:00:00 -0500</pubDate>
+        <link>/hack%20reactor/software%20engineering/bootcamp/thesis/contracts/negotiation/2016/01/06/contractfix.html</link>
+        <guid isPermaLink="true">/hack%20reactor/software%20engineering/bootcamp/thesis/contracts/negotiation/2016/01/06/contractfix.html</guid>
+        
+        
+        <category>hack reactor</category>
+        
+        <category>software engineering</category>
+        
+        <category>bootcamp</category>
+        
+        <category>thesis</category>
+        
+        <category>contracts</category>
+        
+        <category>negotiation</category>
+        
+      </item>
+    
+      <item>
+        <title>bubbleSort</title>
+        <description>&lt;p&gt;BubbleSort is one of the most basic sorting algorithms. The algorithm sorts an array by starting from the first element, comparing it to the second. If the first element is greater than the second, their indexes are swapped. Then the second element is compared to the third and third is compared to the fourth and so on. At the end of the array, the algorithm starts from the beginning of the array again and repeats this entire process until the array is completely sorted. Because of having to repeat iterating through the array possibly multiple times, it is quite slow in speed, with time complexity of O(n^2) and is recommended for data set that has only few unsorted items. Below is implementation of bubbleSort in O(n^2) complexity.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bubbleSort&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]){&lt;/span&gt;
+         &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bigger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+         &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+         &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bigger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+       &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;But during sorting, there could be instances where no elements are swapped because parts of the array are already sorted. Then, we do not have to iterate through the entire array. Below is a more optimized version of bubbleSort.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bubbleSort2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+     &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;swapped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]){&lt;/span&gt;
+           &lt;span class=&quot;nx&quot;&gt;swapped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+           &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bigger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+           &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+           &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bigger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+         &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;swapped&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Finally, if you walk through every step of bubbleSort, you will see that we do not need to consider every element inside the array. I like to imagine bubbleSort as a pile of snow rolling downhill. As it rolls down, the pile gets bigger and bigger. As the array gets sorted, always the largest value ‘bubbles’ up to the end, so we do not have to consider the last item in the array. Below is the second optimized implementation.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bubbleSort3&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+      &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;swapped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;false&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]){&lt;/span&gt;
+           &lt;span class=&quot;nx&quot;&gt;swapped&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+           &lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bigger&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+           &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+           &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;+&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bigger&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;swapped&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt;
+        &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+</description>
+        <pubDate>Fri, 18 Dec 2015 00:00:00 -0500</pubDate>
+        <link>/hack%20reactor/software%20engineering/bootcamp/sorting%20algorithms/2015/12/18/bubblesort.html</link>
+        <guid isPermaLink="true">/hack%20reactor/software%20engineering/bootcamp/sorting%20algorithms/2015/12/18/bubblesort.html</guid>
+        
+        
+        <category>hack reactor</category>
+        
+        <category>software engineering</category>
+        
+        <category>bootcamp</category>
+        
+        <category>sorting algorithms</category>
+        
+      </item>
+    
+      <item>
+        <title>Why I chose Angular for front-end development</title>
+        <description>&lt;p&gt;For our thesis project, we chose Angular for front-end development. Below are some of the reasons why we decided with Angular.&lt;/p&gt;
+
+&lt;p&gt;1) “Fairly easy” to get started. I mean there are going to be large learning curves for all frameworks when you want to build large scale applications. But, when you first start out, you can create a simple Angular app pretty quickly, not to mention the incredible amount of resources, tutorials, and blog posts that guide you through the making of it. This definitely helped lower my concerns about moving forward with Angular.&lt;/p&gt;
+
+&lt;p&gt;2) “Simplicity”. You can start working with Angular in a basic HTML doc from your local system. You don’t even need a web server and all you need to do is just open the HTML doc in your browser and this is incredibly helpful when creating quick layout/dummy of new features.&lt;/p&gt;
+
+&lt;p&gt;3) “Easy integration”. Angular starts its work only after the page loads. For instance, once HTML is in the DOM, then Angular does its stuff, which makes it easy to integrate Angular components into existing applications. Also, Angular is one of the only major front end frameworks that use javaScript objects for models. This also makes it easy to integrate with existing data sources. Finally, it can easily integrate with external libraries such as iQuery, Angular UI, Ionic or AngularFire.&lt;/p&gt;
+
+&lt;p&gt;4) “Extensibility”.  Angular allows you to create custom elements and attributes outside the standard HTML vocabulary. You can define how a custom element is rendered and assign specific behaviors to it and you can essentially create a library of your own reusable components!&lt;/p&gt;
+</description>
+        <pubDate>Sat, 12 Dec 2015 00:00:00 -0500</pubDate>
+        <link>/hack%20reactor/software%20engineering/bootcamp/angular/front-end%20frameworks/2015/12/12/why-i-chose-angular-for-frontend.html</link>
+        <guid isPermaLink="true">/hack%20reactor/software%20engineering/bootcamp/angular/front-end%20frameworks/2015/12/12/why-i-chose-angular-for-frontend.html</guid>
+        
+        
+        <category>hack reactor</category>
+        
+        <category>software engineering</category>
+        
+        <category>bootcamp</category>
+        
+        <category>angular</category>
+        
+        <category>front-end frameworks</category>
+        
+      </item>
+    
+      <item>
+        <title>SelectionSort</title>
+        <description>&lt;p&gt;SelectionSort sorts an array by iterating through it, comparing each element with the smallest element in the array and swapping their places. This sorting algorithm has a O(n^2) time complexity so it is ideal for handling small lists.For this particular example, I am going to use a helper function called indexOfMinimum. The indexOfMinimum function will take in a start index and will return the index of smallest element ‘FROM’ the start index.&lt;/p&gt;
+
+&lt;p&gt;Below is the implementation.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-javascript&quot; data-lang=&quot;javascript&quot;&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;selectionSort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ 
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;smallestIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+         &lt;span class=&quot;nx&quot;&gt;smallestIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;indexOfMinimum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+         &lt;span class=&quot;nx&quot;&gt;temp&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+         &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;smallestIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+         &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;smallestIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;temp&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+ 
+&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;indexOfMinimum&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;startIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+ 
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;minIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;startIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;minValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;startIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;var&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;startIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+          &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;minValue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+             &lt;span class=&quot;nx&quot;&gt;minIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+             &lt;span class=&quot;nx&quot;&gt;minValue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;arr&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+           &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;minIndex&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+</description>
+        <pubDate>Sat, 05 Dec 2015 00:00:00 -0500</pubDate>
+        <link>/hack%20reactor/software%20engineering/bootcamp/sorting%20algorithms/2015/12/05/selectionsort.html</link>
+        <guid isPermaLink="true">/hack%20reactor/software%20engineering/bootcamp/sorting%20algorithms/2015/12/05/selectionsort.html</guid>
+        
+        
+        <category>hack reactor</category>
+        
+        <category>software engineering</category>
+        
+        <category>bootcamp</category>
+        
+        <category>sorting algorithms</category>
+        
+      </item>
+    
+      <item>
+        <title>Beauty of Pair Programming</title>
+        <description>&lt;p&gt;I’ve never heard of the term ‘pair programming’ until I decided to apply to Hack Reactor. Apparently during the admissions interview, I would have to pair program with the interviewer and this thought scared me a little. I thought I would be expected to know all the codes written by the interviewer and vice-versa. Turns out, pair programming is just a term for ‘communication between two coders/developers who are working on the same project at given time’.&lt;/p&gt;
+
+&lt;p&gt;At Hack Reactor, for the first half of the program, we are given a “sprint” to complete every two days and all of this is done in pairs. One might ask, what is the point of pair programming? Shouldn’t you try to learn everything by yourself?&lt;/p&gt;
+
+&lt;p&gt;But the reality is, when you actually get a job as a software engineer, you will never solo your way through an entire project. You will have to communicate with developers who might have different backgrounds and different way of thinking and Hack Reactor is prepping us for it.&lt;/p&gt;
+
+&lt;p&gt;Now, I never realized how much I enjoyed and benefitted from pair programming until I had to complete couple of sprints by myself. For instance, pair programming opened my eyes to new ideas and resources presented by my cohort-mates. It also helped me see how much further ‘effective pair programming’ can take your projects (to a much higher level). When you are pair-programming, you are not just writing codes together but you are essentially building trust and when that trust is established and brought together with both of your coding capabilities, better outcomes are created.&lt;/p&gt;
+
+&lt;p&gt;Yeah.. so to put it briefly, pair programming ROCKS.&lt;/p&gt;
+</description>
+        <pubDate>Sun, 15 Nov 2015 00:00:00 -0500</pubDate>
+        <link>/hack%20reactor/software%20engineering/bootcamp/2015/11/15/beauty-of-pairprogramming.html</link>
+        <guid isPermaLink="true">/hack%20reactor/software%20engineering/bootcamp/2015/11/15/beauty-of-pairprogramming.html</guid>
+        
+        
+        <category>hack reactor</category>
+        
+        <category>software engineering</category>
+        
+        <category>bootcamp</category>
+        
+      </item>
+    
+      <item>
+        <title>Don’t go down the rabbit hole – Imposter Syndrome</title>
+        <description>&lt;p&gt;One of the phrases that I heard the most since coming to Hack Reactor is – “Don’t fall into the trap of imposter syndrome. All of you are smart and deserve to be here”.&lt;/p&gt;
+
+&lt;p&gt;Well first of all, what is imposter syndrome? Imposter/fraud syndrome is a term psychologists use to describe people who are unable to recognize their own accomplishments. People suffering from this are convinced that they are frauds or phonies and fear that others will discover the truths about them. They could have an endless of list of accomplishments but those are considered as results of luck, lying, or timing.&lt;/p&gt;
+
+&lt;p&gt;Now that I look back, I think I have been dealing with imposter syndrome for awhile. Just to give few examples, on my college graduation day, I felt embarrassed to celebrate graduation because I was thinking to myself, ‘so what, everyone graduates’ and I packed up and left campus in a rush as soon as I got my diploma. When I got accepted to grad school, I didn’t feel like telling anyone because once again I was thinking ‘everyone I know got accepted.’ These feelings worsened after I finished grad school. Attending grad school was supposed to make me smarter and better and I felt like that didn’t happen.&lt;/p&gt;
+
+&lt;p&gt;After many hours of meditation and self-reflection, I realized later that the reason why I felt like a fraud and ashamed to talk about my accomplishments was because I was comparing myself to a perfect version of me that never existed. I was thinking of myself as a more important person and ironically, this excessive self-importance caused me to feel like I am inadequate and unqualified. It’s really funny how the mind works.&lt;/p&gt;
+
+&lt;p&gt;Back to talking about Hack Reactor.&lt;/p&gt;
+
+&lt;p&gt;Given the intensity of Hack Reactor’s curriculum, It is easy to feel like I am an imposter. I am coding/studying all day every day surrounded by my classmates who are bright and motivated. But luckily, Hack Reactor has a great culture that makes me feel safe and that I won’t be penalized for not knowing things. After all, I am doing this program for myself, not anyone else.&lt;/p&gt;
+
+&lt;p&gt;Below are some reminders I give myself to overcome imposter syndrome:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;let go of yourself and redirect your focus to something else&lt;/li&gt;
+  &lt;li&gt;accept that you are awesome the way you are&lt;/li&gt;
+  &lt;li&gt;not everyone is going to like you&lt;/li&gt;
+  &lt;li&gt;stop comparing yourself to others&lt;/li&gt;
+  &lt;li&gt;reveal yourself and show who you are&lt;/li&gt;
+  &lt;li&gt;knowing everything !== being ‘real’&lt;/li&gt;
+  &lt;li&gt;come up with your own definition of ‘real’, ‘authentic’&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;So, I am not going to stress even if I feel like an imposter sometimes. I don’t know everything but I know that while I am strict on myself, I tend to overemphasize what other people do. I am amongst good company and am continuously learning.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 24 Oct 2015 00:00:00 -0400</pubDate>
+        <link>/hack%20reactor/software%20engineering/bootcamp/2015/10/24/imposter-syndrome.html</link>
+        <guid isPermaLink="true">/hack%20reactor/software%20engineering/bootcamp/2015/10/24/imposter-syndrome.html</guid>
+        
+        
+        <category>hack reactor</category>
+        
+        <category>software engineering</category>
+        
+        <category>bootcamp</category>
+        
+      </item>
+    
+      <item>
+        <title>Hack Reactor Week 1&amp;2 Reflections</title>
+        <description>&lt;p&gt;It has been well over two weeks since I began my Hack Reactor journey and here I am writing my first blog post about it. If I were to spit out an excuse, I will say that I’ve been busy and tired, coding and studying for 10+ hours everyday on subjects that are foreign to me. But many of my classmates have already been publishing blog posts and they are doing this program from across the globe, barely seeing any daylight while taking care of their family!! So I really have no excuses. The truth is, I wanted some time to really think about my first impression on Hack Reactor and reflect on my experiences and observations so far.&lt;/p&gt;
+
+&lt;p&gt;Well…so far, I love it. Hack Reactor is definitely unlike anything I’ve done before. While the schedule at Hack Reactor is super compact and intense, I surprisingly have a lot more freedom than I expected and time goes by very quickly. Whenever we start learning new materials, hardly any guidelines are given and it is entirely up to me to search for resources and seek help. Everything that I am required to do here has to be a result of proactive learning. This can be difficult getting used to especially if you come from a culture where learning is usually one-sided – teachers lecture and students take notes/absorb/memorize (happens a lot back in Korea). I remember on my third day, when we were given an entirely new assignment, I thought to myself, “Why aren’t they teaching this to me?” But now I know that Hack Reactor isn’t about one-sided teaching. Hack Reactor provides incredible resources and opportunities for you to shape your entire learning habits so that you can become an independent developer and person! And by being provided freedom to explore different resources and options within time constraints (ironically), students are pushed to exercise their abilities to the fullest extent.&lt;/p&gt;
+
+&lt;p&gt;Finally, I’d like to add that people here are nice and good to each other. The staff members are helpful, responsive, and really try to make everyone’s experiences as rewarding as possible, and my classmates are incredible and never hesitate to help each other. I am very thankful to be a part of this culture and I am sure I am going to enjoy every minute of this and any challenges to come.&lt;/p&gt;
+
+</description>
+        <pubDate>Wed, 21 Oct 2015 19:34:01 -0400</pubDate>
+        <link>/hack%20reactor/software%20engineering/bootcamp/2015/10/21/hr-reflections.html</link>
+        <guid isPermaLink="true">/hack%20reactor/software%20engineering/bootcamp/2015/10/21/hr-reflections.html</guid>
+        
+        
+        <category>hack reactor</category>
+        
+        <category>software engineering</category>
+        
+        <category>bootcamp</category>
+        
+      </item>
+    
+  </channel>
+</rss>
